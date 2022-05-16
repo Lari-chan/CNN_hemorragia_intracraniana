@@ -135,7 +135,7 @@ for indice_treino, indice_val in kfold.split(all_CT, all_label):
   print(f"doentes na val: {temp2['label'].sum()} ({round(temp2['label'].sum()/temp2['label'].count()*100, 2)})%")
   print()
   #data augmentation dos dados
-  train_aug_CTs, train_aug_labels = data_aug_v2(all_CT[indice_treino], all_CT[indice_treino], n_dados1, 1)
+  train_aug_CTs, train_aug_labels = data_aug_v2(all_CT[indice_treino], all_label[indice_treino], n_dados1, 1)
   train_aug_CTs, train_aug_labels = data_aug_v2(train_aug_CTs, train_aug_labels, n_dados0, 0)
 
   #channels last
